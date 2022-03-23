@@ -4,7 +4,7 @@ function get_mirspectrum(wavfiles,index)
 %   input:  wavfiles - struct obtained by using dir
 %           index - index number of the desired file
 
-path_to_wav = fullfile(wavfiles(index).folder,wavfiles(index).name);
+path_to_wav = fullfile(wavfiles(index).folder, wavfiles(index).name);
 mirspectrum(path_to_wav,'db')
 fprintf('Displaying %s ...\n\n', path_to_wav)
 
