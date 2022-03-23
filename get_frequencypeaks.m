@@ -9,7 +9,7 @@ function [f0, frequencies] = get_frequencypeaks(filename,npeaks,sl)
 
 f = mirgetdata(mirpitch(filename, 'Reso','SemiTone',...
                                   'Order','Amplitude', ...
-                                  'Total', 3));
+                                  'Total', 1));
 
 try
     f = sort(f);    % partial frequencies
