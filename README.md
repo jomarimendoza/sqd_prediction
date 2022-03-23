@@ -7,7 +7,7 @@ different bamboo musical instruments in the Philippines.
 First, we determine pitch of the BMI samples by following the instructions below:
 
 ### Prerequisite:
-Download the MIR toolbox [here](href=https://www.jyu.fi/hytk/fi/laitokset/mutku/en/research/materials/mirtoolbox).
+Download the MIR toolbox [here](https://www.jyu.fi/hytk/fi/laitokset/mutku/en/research/materials/mirtoolbox).
 
 ### 1. Edit <em>include.m</em>
 > dataset_dir = 'folder/containing/audiodata' 
