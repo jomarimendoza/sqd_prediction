@@ -18,7 +18,7 @@ for i = 1:ndata
     data_s(i).f0 = F0;             % check fundamental frequency
     data_s(i).freq = freq;         % check the frequency
 end
-%%
+
 data_t = struct2table(data_s);
 
 clc;
@@ -28,3 +28,10 @@ fprintf(['\nInstructions: \n   You could easily copy-paste \n' ...
     '   table data by selecting the ''data_t'' \n' ...
     '   variable in the workspace. \n\n']);
 disp('=================================');
+
+%% Select a particular spectrum here
+row_number = 4;
+get_mirspectrum(wavfiles, row_number);
+
+% Observe the peak that has the lowest frequency. This will be your
+% fundamental frequency.
