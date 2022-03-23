@@ -12,7 +12,7 @@ for i = 1:ndata
 
     [aw,fs] = audioread(w);
 
-    [f0, freq] = get_frequencypeaks(miraudio(aw,fs),8,5);
+    [f0, freq] = get_frequencypeaks(miraudio(aw(:,1),fs),8,5);
     
     % get highest peaks
     F0 = f0;
