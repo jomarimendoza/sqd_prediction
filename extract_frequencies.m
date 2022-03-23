@@ -14,8 +14,8 @@ for i = 1:ndata
     
     % get highest peaks
     F0 = f0;
-    data_s.folder = wavfiles(i).folder;
-    data_s.filename = wavfiles(i).name;
+    data_s(i).folder = wavfiles(i).folder;
+    data_s(i).filename = wavfiles(i).name;
     data_s(i).f0 = F0;             % check fundamental frequency
     data_s(i).freq = freq;         % check the frequency
 end
