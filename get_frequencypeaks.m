@@ -4,14 +4,19 @@ function [f0, frequencies] = get_frequencypeaks(filename,npeaks,sl)
 %   input:  filename - the wavefile to determine the frequency
 %           npeaks - number of peaks to extract
 %           sl - smoothing window length
-%   output:  
+%   output: f0 - fundamental frequencies
+%           frequencies - freqency peaks, not necessarily harmonics
 
-% get the fundamental freuqency
 f = mirgetdata(mirpitch(filename, 'Reso','SemiTone',...
                                   'Order','Abscissa', ...
                                   'Total', 3));
-f = sort(f);
-f0 = f(1);
+
+try
+    f = sort(f);    % partial frequencies
+    f0 = f(1);      % fundamental frequency
+catch 
+    f0 = 0;
+end
 
 % get peaks on smooth spectrum to exclude closely place peaks
 frequencies = mirgetdata(mirpeaks(mirspectrum(filename,'db',...
@@ -19,9 +24,7 @@ frequencies = mirgetdata(mirpeaks(mirspectrum(filename,'db',...
                     'Smooth',sl),...
                     'Reso','SemiTone',...
                     'Order','Abscissa',...
-                    'Total',npeaks));
-
-
+                    'Total', npeaks));
 
 end
 

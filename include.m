@@ -3,10 +3,14 @@ addpath(genpath('utils'));
 
 %% Set environment variables
 
-dataset_dir = '.';      % EDIT: change to the dataset directory
-toolboxes_dir = '.';    % EDIT: change to the MIRToolbox directory
-figures_dir = '.';      % EDIT: change to output plots directory
-videos_dir = '.';       % EDIT: change to output videos directory
+% EDIT: change to the dataset directory
+dataset_dir = '.';      
+% EDIT: change to the MIRToolbox directory
+toolboxes_dir = '';    
+% EDIT: change to output plots directory
+figures_dir = '.';      
+% EDIT: change to output videos directory
+videos_dir = '.';       
 
 setenv('DIR_DATASET', dataset_dir);
 setenv('DIR_TOOLBOX', toolboxes_dir)
