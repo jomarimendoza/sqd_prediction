@@ -5,7 +5,7 @@ function get_mirspectrum(wavfiles,index)
 %           index - index number of the desired file
 
 path_to_wav = fullfile(wavfiles(index).folder, wavfiles(index).name);
-mirspectrum(path_to_wav,'db')
+mirpeaks(mirspectrum(path_to_wav,'db'),'Total',5)
 fprintf('Displaying %s ...\n\n', path_to_wav)
 
 end

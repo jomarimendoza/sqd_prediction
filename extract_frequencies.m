@@ -10,9 +10,7 @@ ndata = length(wavfiles);
 for i = 1:ndata
     w = fullfile(wavfiles(i).folder, wavfiles(i).name);
 
-    [aw,fs] = audioread(w);
-
-    [f0, freq] = get_frequencypeaks(miraudio(aw(:,1),fs),8,5);
+    [f0, freq] = get_frequencypeaks(w, 8, 5);
     
     % get highest peaks
     F0 = f0;
